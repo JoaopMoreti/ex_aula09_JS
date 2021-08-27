@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background:rgb(86, 124, 206);
+            color:white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 name= tit>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body//a cor de fundo agora é uma variavel 
+        var p1 = window.document.getElementsByTagName('p')[0];
+        /*window.document.write('está escrito assim: ' + p1.innerText)innerText puxa o texto q tá dentro do 1ºparágrafo
+        
+        //corpo.style.background = 'black' (mudou a cor do fundo usando-a como váriavel)*/
+
+        //p1.style.color = 'blue'(mudou o style do p1 para azul)
+
+        //document.write(p1.innerHTML);(seria necessario se caso quisesse que o p1 fosse repetido novamente e se estivesse [1] no cochete pq se colocasse somente o innertext a frase se repetiria sem o DOM estar em negrito q nem na frase original pq o innerText puxa somente o texto e o innerHTML o html inteiro)
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...'(trocava o texto da div de "Clique em mim" para "Estou aguardando")
+
+        var h = window.document.getElementsByName('tit')[0]
+        h.innerText = 'Olá!'
+
+    </script>
+</body>
+</html>
